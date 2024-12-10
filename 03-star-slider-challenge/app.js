@@ -13,3 +13,17 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+const starSlider = document.getElementById("starSlider");
+
+const starsContainer = document.getElementById('stars');
+
+function updateStars() {
+  const value = starSlider.value;
+  let stars = ''
+  for (let i = 0; i < value; i++) {
+    stars += '★';
+  }
+  starsContainer.innerHTML = stars;
+}
+updateStars();
+starSlider.addEventListener("input", updateStars);
