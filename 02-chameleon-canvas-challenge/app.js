@@ -13,3 +13,13 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+//Grab the colour picker
+const colourPicker = document.getElementById("colorPicker");
+//Grab the canvas
+const canvas = document.getElementById("canvas");
+//When changing the colour on the colour picker
+function changeColour() {
+  canvas.style.backgroundColor = colourPicker.value;
+} 
+//Change the canvas to that columnRuleColor: 
+colourPicker.addEventListener("input", changeColour);
